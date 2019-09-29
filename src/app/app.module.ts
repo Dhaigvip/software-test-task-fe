@@ -9,11 +9,13 @@ import { AddformComponent } from './addform/addform.component';
 import { AllclientsComponent } from './allclients/allclients.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
+import { EditformComponent } from './editform/editform.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddformComponent,
+    EditformComponent,
     AllclientsComponent,
     NavComponent,
     HomeComponent

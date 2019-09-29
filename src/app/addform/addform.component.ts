@@ -26,13 +26,12 @@ export class AddformComponent implements OnInit {
     return this.messageForm.get('phonenumber');
   }
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) {}
-     
+  constructor(private formBuilder: FormBuilder, private http: HttpClient) { }
   ngOnInit() {
-    this.messageForm = this.formBuilder.group( {
+    this.messageForm = this.formBuilder.group({
       firstname: ['', [Validators.required, Validators.maxLength, Validators.pattern]],
       surname: ['', [Validators.required, Validators.maxLength, Validators.pattern]],
-      phonenumber: ['', [Validators.required, Validators.minLength, Validators.maxLength, Validators.pattern]]    
+      phonenumber: ['', [Validators.required, Validators.minLength, Validators.maxLength, Validators.pattern]]
     });
   }
 
@@ -49,10 +48,10 @@ export class AddformComponent implements OnInit {
         'Content-Type': 'application/json'
       })
     };
-     return this.http.post('api/v1/clients', {
-      "firstname": this.messageForm.value.firstname,
-      "surname": this.messageForm.value.surname,
-      "phoneNumber": this.messageForm.value.phonenumber
+    return this.http.post('api/v1/clients', {
+      'firstname': this.messageForm.value.firstname,
+      'surname': this.messageForm.value.surname,
+      'phoneNumber': this.messageForm.value.phonenumber
     }, httpOptions).subscribe((data) => console.log(data));
   }
 
