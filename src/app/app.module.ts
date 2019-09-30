@@ -12,21 +12,21 @@ import { HomeComponent } from './home/home.component';
 import { EditformComponent } from './editform/editform.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AddformComponent,
-    EditformComponent,
-    AllclientsComponent,
-    NavComponent,
-    HomeComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    ReactiveFormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        AddformComponent,
+        EditformComponent,
+        AllclientsComponent,
+        NavComponent,
+        HomeComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        ReactiveFormsModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
