@@ -22,7 +22,7 @@ export class AddformComponent implements OnInit {
     return this.messageForm.get('surname');
   }
 
-  get phoneNumber() {
+  get phonenumber() {
     return this.messageForm.get('phonenumber');
   }
 
@@ -51,7 +51,7 @@ export class AddformComponent implements OnInit {
     return this.http.post('api/v1/clients', {
       'firstname': this.messageForm.value.firstname,
       'surname': this.messageForm.value.surname,
-      'phoneNumber': this.messageForm.value.phonenumber
+      'phonenumber': this.messageForm.value.phonenumber
     }, httpOptions).subscribe((data) => console.log(data));
   }
 
